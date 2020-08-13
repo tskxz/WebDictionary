@@ -21,8 +21,10 @@
 		</form>
 		<p class="h1" style="margin-top: 10px;">{{word}}</p>
 		<blockquote class="blockquote">
-			<p class="mb-0">{{messages}}
 			<p class="mb-0">{{message}}</p>
+			{% for msgs in messages%}
+			<p class="mb-0">{{msgs}}</p>
+			{% endfor %}
 		</blockquote>
 	</main>
 </body>

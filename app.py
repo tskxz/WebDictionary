@@ -1,8 +1,13 @@
+# Importing json to get the data
+# Importing flask to make webpage
+# Importing the difflib module to compare the words
 import json
 from flask import Flask
 from flask import render_template
 from flask import request
 from difflib import get_close_matches
+
+# Loads the json file
 data = json.load(open('data.json'))
 
 app = Flask(__name__)
@@ -19,12 +24,11 @@ def definition_word(word):
 def dictionary():
 	# Input value of the given input word
 	word = request.form['word']
-	print(word)
+	#print(word)
 	messages = definition_word(word)
-	print(messages)
+	#print(messages)
 	if type(messages) == list:
-		for message in messages:
-			return render_template('home.html', word=word, message=message)
+		return render_template('home.html', word=word, messages=messages)
 		if word.title() in data:
 			word = word.title()
 			messages = definition_word(word)
