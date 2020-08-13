@@ -5,7 +5,7 @@ Web Dictionary Application on python with flask. Returns the definition of the g
 ### Features
  - Improve the "get_close_matches" to get the similiar word
  - Gives more than one definition of the word if exists
- - Try to be more and having more friendly input
+ - Try to be more and having friendly input
  
 ## Installation
 #### Cloning and running it on your local host
