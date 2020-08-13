@@ -1,7 +1,6 @@
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/noneidonthv/webdictionary?type=cf-1)]( https://g.codefresh.io/public/accounts/noneidonthv/pipelines/new/5f35a51f1aa459de0a67bb5b)
 # Web-Dictionary
 Web Dictionary Application on python with flask. Returns the definition of the given word in the input
-![image](https://i.imgur.com/spPpfh3.jpg)
 
 ### Features
  - Improve the "get_close_matches" to get the similiar word
@@ -15,3 +14,6 @@ Go into to the directory by doing `cd WebDictionary`
 You should to install an mini framework to able to run the application. Install flask with 
 `$ pip3 install flask`
 Run the app.py file with `python3 app.py` and make sure to go `http://localhost:5000/ on your browser.
+
+
+![image](https://i.imgur.com/spPpfh3.jpg)
