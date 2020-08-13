@@ -2,3 +2,16 @@
 # Web-Dictionary
 Web Dictionary Application on python with flask. Returns the definition of the given word in the input
 ![image](https://i.imgur.com/spPpfh3.jpg)
+
+### Features
+ - Improve the "get_close_matches" to get the similiar word
+ - Gives more than one definition of the word if exists
+ - Try to be more and having more friendly input
+ 
+## Installation
+#### Cloning and running it on your local host
+`$ git clone https://github.com/tanjilk/WebDictionary.git`
+Go into to the directory by doing `cd WebDictionary`
+You should to install an mini framework to able to run the application. Install flask with 
+`$ pip3 install flask`
+Run the app.py file with `python3 app.py` and make sure to go `http://localhost:5000/ on your browser.
