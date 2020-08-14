@@ -11,19 +11,22 @@
 <body>
 	<main role="main" class="container">
 		<h1 class="mt-5">Flask Web Application Dictionary</h1>
-		<p class="lead"> Interactive Dictionary, write the word to know the definition of the given word.
+		<h4 class="mt-5">Welcome to the Dictionary Application!</h4>
+		<p class="lead"> This is an Interactive Dictionary, write the word which you dont know the definition.
 
-			<div id="dictionary" style="padding-right: 900px;">
+			<div id="dictionary">
 				<form method="POST" action='/dictionary/'>
 				<input class="form-control" type="text" name='word' placeholder="Enter a word">
 			</div>
 			<button type="submit" class="btn btn-outline-dark" style="margin-top: 15px;" value="enter" name="enter">Enter</button>
 		</form>
-		<p class="h1" style="margin-top: 10px;">{{word}}</p>
+		<p class="h1" style="margin-top: 10px;">{{word|capitalize}}</p>
 		<blockquote class="blockquote">
-			<p class="mb-0">{{message}}</p>
+			<p class="mb-0">{{message|safe}}</p>
+
 			{% for msgs in messages%}
-			<p class="mb-0">{{msgs}}</p>
+
+			<p class="mb-0">• {{msgs}}</p>
 			{% endfor %}
 		</blockquote>
 	</main>

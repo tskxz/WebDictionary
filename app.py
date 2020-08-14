@@ -6,6 +6,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from difflib import get_close_matches
+from flask import Markup
 
 # Loads the json file
 data = json.load(open('data.json'))
@@ -40,21 +41,23 @@ def dictionary():
 			for message in messages:
 				return render_template('home.html', word=word, message=message)
 		else:
-			message = "The word doesn't exists. Please double check it."
+			message = Markup("The word doesn't exists. Please double check it.")
 			return render_template('home.html', word=word, message=message)
 		
 	else:
 		if type(messages) == type(None):
 			if len(get_close_matches(word, data.keys())) > 0:
-				word = get_close_matches(word, data.keys())[0]
-				message = f"Do you mean {word} instead?"
-				return render_template('home.html', word=word, message=message)
+				word1 = get_close_matches(word, data.keys())[0]
+				message = f'Do you mean <b>{word1}</b> instead of <i>"{word}"</i>?'
+				return render_template('home.html', word1=word1, message=message)
 			else:
 				message = "The word doesn't exists. Please double check it."
 				return render_template('home.html', word=word, message=message)
 		else:
 			message = "The word doesn't exists. Please double check it."
 			return render_template('home.html', word=word, message=message)
+	message = "Thanks for using this application!"
+	return render_template('home.html', word = word, message = message)
 
 if __name__ == '__main__':
 	app.run(host='localhost', debug=True)
