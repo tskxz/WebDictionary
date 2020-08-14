@@ -15,6 +15,3 @@ Go into to the directory by doing `cd WebDictionary`
 You should to install an mini framework to able to run the application. Install flask with   
 `$ pip3 install flask`
 Run the app.py file with `python3 app.py` and make sure to go `http://localhost:5000/ on your browser.  
-
-
-![image](https://i.imgur.com/spPpfh3.jpg)
